@@ -1,0 +1,23 @@
+from Crawling.Core import *
+
+# (IdPagina, post) 
+posts_rp = [(190833037616321,	1078929488806667),
+(155512901189760,	883816438359399),
+(150312925065096,	991097020986678),
+(233333650017022,	1424624790887896),
+(199365320097475,	1153176728049658),
+(279744252068590,	1054982477878093),
+(329154707292267,	499986646875738),
+(109597815616,	10153790248320617),
+(121389567925045,	1111628988901093)]
+
+for page, post in posts_rp:
+	try:
+		download_post(page, post)
+	except Exception as e:
+		raise e
+
+
+# usuarios = set(u.user_id for u in test())
+# print(len(usuarios))
+# download_users(usuarios)
